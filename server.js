@@ -23,10 +23,8 @@ app.use(cors())
 app.use(express.json())
 
 //routes
+app.use('/api/v1/users', require('./routes/userRoute'))
 
-app.get('/',(req,res)=>{
-    res.send("<h1> Hello bro </h1>")
-})
 
 const PORT =8080 || process.env.PORT
 
